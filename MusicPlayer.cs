@@ -1,12 +1,11 @@
 using NAudio.Wave;
-using NAudio.Wave.SampleProviders;
 
 class MusicPlayer{
     private static MusicPlayer? musicPlayer;
     private AudioFileReader? audioFile;
     private WaveOutEvent? outputDevice;
     private float volume = 1f;
-    private static TimeSpan localPosition = TimeSpan.Zero;
+    private TimeSpan localPosition = TimeSpan.Zero;
     private string? path;
 
     public static MusicPlayer GetMusicPlayer(){
